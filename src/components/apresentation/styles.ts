@@ -6,8 +6,9 @@ import styled from "styled-components";
 
 export const Wrapper = styled.section`
 display: flex;
-width: 100vw;
-align-items: flex-start;
+max-width: 100vw;
+flex-direction: column;
+align-items: center;
 justify-content: center;
 margin-top: 100px;
     
@@ -19,16 +20,19 @@ margin-top: 100px;
 export const Perfil = styled.section`
 display: flex;
 flex-direction: column;
+align-items: center;
+width: 80%;
+height: 40vh;
 margin: 0px;
     .DadosDev{
 
     p{
-        font-size: 18px;
+        font-size: 64px;
         color: #E5E9F0;
     }
 
     h1{
-        font-size: 64px;
+        font-size: 92px;
         font-weight: 400;
         font-family: 'Fira Code';
         color: #E5E9F0;
@@ -43,25 +47,26 @@ margin: 0px;
     .DadosGithub{
     display: flex;
     flex-wrap: wrap;
+    margin-top: 16px;
     gap: 14px;
 
         .const{
-            font-size: 16px;
+            font-size: 32px;
             color: #4D5BCE;
         }
 
         .variable{
-            font-size: 16px;
+            font-size: 32px;
             color: #43D9AD;
         }
 
         .operator{
-            font-size: 16px;
+            font-size: 32px;
             color: #ffffff;
         }
 
         a{
-            font-size: 16px;
+            font-size: 32px;
             text-decoration: none;
             color: #E99287;
         }
@@ -78,7 +83,7 @@ display: flex;
 align-items: center;
 justify-content: center;
 flex-wrap: wrap;
-width: 60%;
+max-width: 80%;
 
     .card{
         display: flex;
@@ -132,6 +137,7 @@ width: 60%;
                 flex-direction: column;
                 align-items: center;
                 justify-content: initial;
+                gap: 16px;
 
                 h2{
                     background-color: transparent;
@@ -150,7 +156,7 @@ width: 60%;
                 align-items: center;
                 justify-content: center;
                 flex-wrap: wrap;
-                color: lightblue;
+                color: #00F1FF;
 
                 p{
                     background-color: transparent;
