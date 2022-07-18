@@ -41,20 +41,37 @@ import styled from "styled-components";
 
   .menuName{
     /* width: 20vw; */
+    display: flex;
     justify-content: start;
     border-left: none;
     padding: 16px;
     flex: 3;
+    justify-content: space-around;
     h2{
         margin-left: 16px;
 
+      }
+    
+      img{
+        width: 30px;
+        height: 30px;
+        padding: 0;
+        border-radius: 50%;
+        transition: 0.2s;   
+        
+      }
+
+      img:hover{
+        box-shadow:  0 0 2em white;
+        transform: scale(1.2);
+        cursor: pointer;
       }
      
   }
 
   .gap{
     /* width: 60vw ; */
-    flex: 10;
+    flex: 8;
   }
 
   .hello{
@@ -69,6 +86,11 @@ import styled from "styled-components";
   .project{
     padding: 16px;
     flex: 1;
+
+    h2{
+      color: white;
+      font-weight: 700;
+    }
   }
 
   .contact{
@@ -76,10 +98,26 @@ import styled from "styled-components";
     display: flex;
     justify-content: end;
     padding: 16px;
-    flex: 2;
+    justify-content: space-around;
+    flex: 4;
       h2{
         margin-right: 16px;
 
+      }
+
+      img{
+        width: 30px;
+        height: 30px;
+        padding: 0;
+        border-radius: 50%;
+        transition: 0.2s;   
+        
+      }
+
+      img:hover{
+        box-shadow:  0 0 2em white;
+        transform: scale(1.2);
+        cursor: pointer;
       }
   }
  

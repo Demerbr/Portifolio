@@ -13,13 +13,21 @@ interface Repository{
     id: number;
     name: string;
     description: string;
+    html_url: string;
+    languages_url?:string;
+    language: string
     
 }
+
+
+
 
 
 interface RepositoryContextData{
     repositories: Repository[]
 }
+
+
 
 
 const RepositoryContext = createContext <RepositoryContextData> (
@@ -30,9 +38,11 @@ export  function RepositoryProvider({children}: RepositoriesProviderProps ){
 
     const [repositories, setRepositories] = useState<Repository[]>([])
 
+
+
     useEffect(() =>{
         api.get('/users/Demerbr/repos')
-        .then(response => console.table(response.data))
+        .then(response => setRepositories(response.data))
     }, [])
 
     useEffect(() =>{
@@ -40,9 +50,8 @@ export  function RepositoryProvider({children}: RepositoriesProviderProps ){
         .then(response => setRepositories(response.data))     
     }, [repositories])
 
-   
-    
 
+    
 
 
     return(

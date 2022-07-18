@@ -1,7 +1,7 @@
 import {  Perfil, Portifolio, Wrapper } from "./styles";
 import imgPasta from "../../assets/img/pasta.svg"
 import githubicon from "../../assets/img/githubIcon.svg"
-import { useRepositories } from "../../hooks/useRepositorymd";
+import { useRepositories } from "../../hooks/useRepository";
 
 
 
@@ -12,15 +12,8 @@ export function Apresentation () {
 
     const { repositories } = useRepositories()
 
-    // const [repositories, setRepositories] = useState<Repository[]>([])
 
 
-    // useEffect(()=>{
-    //     api.get("/users/Demerbr/repos")
-    //     .then(response => setRepositories(response.data))
-    // }, [])
-
-    // console.log(repositories)
 
     const maior = ">"
     return(
@@ -55,28 +48,33 @@ export function Apresentation () {
             {repositories.map(repository =>{
                 return(
 
+
+
                
                 
                 <div className="card">
 
                     <header className="header-card">
                         
+                        <a href={repository.html_url} target="_blank" rel="noreferrer">
                             <img className="pasta" src={imgPasta} alt="icone pasta" />
+                        </a>
+
                             <img className="github" src={githubicon} alt="icone github" />
                     </header>
 
                     
                             <div className="project">
                           
-                                <h2>{repository.name}</h2>
+                                <h2 key={repository.name} > {repository.name}</h2>
                                 <p>{repository.description ?? "Description of projects"}</p>
                                 
                             </div>
 
+                        
                             <div className="tecnologias">
-                                <p>Tecnologias</p>
-                                <p>React</p>
-                                <p>TypeScript</p>
+                                <p>{repository.language ?? "Language"}</p>
+                               
                             </div>
 
                     

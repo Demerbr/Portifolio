@@ -22,7 +22,7 @@ display: flex;
 flex-direction: column;
 align-items: center;
 width: 80%;
-height: 40vh;
+height: 50vh;
 margin: 0px;
     .DadosDev{
 
@@ -68,7 +68,14 @@ margin: 0px;
         a{
             font-size: 32px;
             text-decoration: none;
-            color: #E99287;
+            color: orange;
+            transition: 0.2s;
+        }
+
+        a:hover{
+            box-shadow:  0 0 4em orange;
+            transform: scale(1.1) translate(10%, 10%);        
+            border-radius: 50%;
         }
 
         
@@ -107,21 +114,40 @@ max-width: 80%;
                 justify-content: space-between;
                 background-color: #345575;
                 align-items: center;
+
+                a{
+                    margin: 52px;
+                    background-color: transparent;
+                    padding: 0;
+                }
         
         
                 img{
-                    margin: 52px;
                     padding: 0;
-                    background-color: #345575 ;
+                    background-color: unset ;
+                    border-radius: 10%;
+                   
                 }
+
                 .pasta{
         
                     width: 40px;
                     height: 40px;
+                    padding: 0;
+                    border-radius: 50%;
+                    transition: 0.2s;  
+
+
                     
+                }
+
+                .pasta:hover{
+                    box-shadow:  0 0 2em white;
+                    transform: scale(1.2);
                 }
         
                 .github{
+                    margin: 32px;
                     width: 32px;
                     height: 32px;
                 }
@@ -137,9 +163,12 @@ max-width: 80%;
                 flex-direction: column;
                 align-items: center;
                 justify-content: initial;
+                text-align: center;
+
                 gap: 16px;
 
                 h2{
+                        
                     background-color: transparent;
                     margin: 16px;
                 }
